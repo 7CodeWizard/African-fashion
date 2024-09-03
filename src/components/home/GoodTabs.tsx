@@ -5,8 +5,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Sidebar } from "./SideBar";
 import SelGoods from "@/app/goods/goodTab/page";
-import AllGoods from "./AllGoods";
 const TabsData = [
+    {
+        title: "All",
+        value: "all",
+    },
     {
         title: "Georges",
         value: "georges",
@@ -35,15 +38,14 @@ const TabsData = [
 export default function GoodTabs() {
     return (
         <>
-            <div className="md:block">
+            <div className="md:block ">
                 <div className="border-t">
-                    <div className="bg-background dark:bg-[#18181b]">
+                    <div className="bg-background dark:bg-[#18181b] ">
                         <div className="grid lg:grid-cols-5">
                             <Sidebar className="hidden lg:block" />
-
-                            <div className="col-span-3 lg:col-span-4 lg:border-l">
+                            <div className="col-span-3 lg:col-span-4 lg:border-l min-h-[650px]">
                                 <div className="h-full px-4 py-6 lg:px-8">
-                                    <Tabs defaultValue="georges" className="h-full space-y-6">
+                                    <Tabs defaultValue="all" className="h-full space-y-6">
                                         <div className="space-between flex items-center justify-center md:justify-start">
                                             <TabsList className="gap-1 px-1">
                                                 {
@@ -55,6 +57,7 @@ export default function GoodTabs() {
                                                 }
                                             </TabsList>
                                         </div>
+                                        <Separator className="mt-4" />
                                         {
                                             TabsData.map((item, index) => (
                                                 <TabsContent
