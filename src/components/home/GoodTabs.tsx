@@ -47,7 +47,7 @@ export default function GoodTabs() {
                                 <div className="h-full px-4 py-6 lg:px-8">
                                     <Tabs defaultValue="all" className="h-full space-y-6">
                                         <div className="space-between flex items-center justify-center md:justify-start">
-                                            <TabsList className="gap-1 px-1">
+                                            <TabsList className="md:gap-1 px-1 gap-0 ">
                                                 {
                                                     TabsData.map((item, index) => (
                                                         <TabsTrigger value={item.value} className="relative" key={index}>

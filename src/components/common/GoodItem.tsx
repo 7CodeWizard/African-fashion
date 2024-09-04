@@ -32,10 +32,9 @@ interface GoodItemProps {
 
 
 const GoodItem = ({ good }: any) => {
-    console.log("good:", good)
-    // const price = good.price.toString();
+    const price = good.price.toString();
     return (
-        <Link href={`/trips/${good.id}`}>
+        <Link href={`/goods/${good.id}`}>
             <Card
                 isPressable
                 radius="md"
@@ -61,7 +60,12 @@ const GoodItem = ({ good }: any) => {
                         </div>
                     </div>
                     <div className="text-tiny text-white bg-secondary px-4 py-2 rounded-full font-medium">
-                        View More
+                        {parseFloat(price).toLocaleString("pt-BR", {
+                            style: "currency",
+                            currency: "BRL",
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0,
+                        })}
                     </div>
                 </CardFooter>
             </Card>

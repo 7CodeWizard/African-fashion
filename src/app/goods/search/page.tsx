@@ -45,7 +45,7 @@ const SearchResult = () => {
                         endContent={<MdTravelExplore />}
                         onClick={homePage}
                     >
-                        Back to category
+                        Back to catalog
                     </Button>
                 )}
             </div>

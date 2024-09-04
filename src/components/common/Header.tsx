@@ -158,7 +158,7 @@ export default function Header() {
                                     startContent={<MdTravelExplore />}
                                     onClick={() => router.push("/")}
                                 >
-                                    My Profile
+                                    Catalog
                                 </DropdownItem>
                                 <DropdownItem
                                     startContent={<LuLogOut />}
