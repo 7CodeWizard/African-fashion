@@ -32,10 +32,10 @@ export function Sidebar({ className }: SidebarProps) {
                     </h2>
                     <div className="px-4">
                         {buttonData.map((item, index) => (
-                            <div key={index} className="relative inline-block text-left w-full">
+                            <div key={index} className="relative inline-block text-left w-full border-b">
                                 <button
                                     onClick={() => handleToggle(index)}
-                                    className="w-full flex items-center justify-start transition-colors duration-500 ease-in-out hover:bg-[#590BD8] rounded-lg dark:text-white p-4"
+                                    className="w-full flex items-center justify-start transition-colors duration-500 ease-in-out hover:bg-[#590BD8]  hover:text-white p-4"
                                     aria-haspopup="true"
                                     aria-expanded={openIndex === index}
                                 >
@@ -47,7 +47,7 @@ export function Sidebar({ className }: SidebarProps) {
                                         <div className="py-1">
                                             {item.items.map((subItem, subIndex) => (
                                                 <Link key={subIndex} href={`/goods/search?text=${subItem}`}>
-                                                    <div className="block px-8 py-2 text-gray-700 dark:text-gray-300 transition-colors duration-500 ease-in-out hover:bg-[#590BD8] rounded-lg">
+                                                    <div className="block px-8 py-2 text-gray-700 dark:text-gray-300 hover:text-white transition-colors duration-500 ease-in-out hover:bg-[#590BD8] rounded-lg">
                                                         {subItem}
                                                     </div>
                                                 </Link>
